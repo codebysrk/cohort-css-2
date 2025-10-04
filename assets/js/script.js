@@ -1,11 +1,1 @@
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
-menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-  const isMenuOpen = menuToggle.classList.toggle('ri-menu-line');
-  menuToggle.classList.toggle('ri-close-line', !isMenuOpen);
-  menuToggle.setAttribute(
-    'aria-label',
-    isMenuOpen ? 'Open menu' : 'Close menu'
-  );
-});
+const menuToggle=document.getElementById("menu-toggle"),navMenu=document.getElementById("nav-menu");menuToggle.addEventListener("click",()=>{navMenu.classList.toggle("active");const e=menuToggle.classList.toggle("ri-menu-line");menuToggle.classList.toggle("ri-close-line",!e),menuToggle.setAttribute("aria-label",e?"Open menu":"Close menu")});
