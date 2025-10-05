@@ -2,3 +2,46 @@
 assets/js/script.min.js
 assets/css/style.min.css
 index.min.html
+
+
+
+
+
+
+
+
+
+.card::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 90%;
+  text-align: center;
+  padding: 0.2rem 0;
+  transform: translate(-50%, 10px);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--light-text-color); /* Fixed contrast issue */
+  border-radius: 5px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  backdrop-filter: blur(2px);
+  font-family: radioactive, sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* --- Card Hover Effects (FIXED) --- */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card:hover::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
